@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caption Genius</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="ai-title">Caption Genius <i class="fas fa-brain"></i></h1>
+            <p class="ai-subtitle">Powered by AI</p>
+        </header>
+
+        <main>
+            <section class="caption-section">
+                <h2>Generate Caption</h2>
+                <button id="generateBtn" class="btn">
+                    <i class="fas fa-magic"></i> Generate AI Caption
+                </button>
+                <div class="ai-processing" id="aiProcessing">
+                    <i class="fas fa-microchip"></i>
+                    <span>AI Processing...</span>
+                </div>
+                <div class="loader ripple-loader" id="captionLoader"></div>
+                <div id="captionResult" class="result-box"></div>
+                <div id="captionError" class="error-message"></div>
+            </section>
+
+            <section class="mood-section">
+                <h2>Mood-based Caption</h2>
+                <select id="moodSelect" class="mood-select">
+                    <option value="happy">Happy 😊</option>
+                    <option value="sad">Sad 😢</option>
+                    <option value="excited">Excited 🎉</option>
+                    <option value="romantic">Romantic 💕</option>
+                </select>
+                <button id="moodBtn" class="btn">Generate</button>
+                <div class="loader dots-loader" id="moodLoader"></div>
+                <div id="moodResult" class="result-box"></div>
+                <div id="moodError" class="error-message"></div>
+            </section>
+
+            <section class="voice-section">
+                <h2>Voice Input</h2>
+                <button id="voiceBtn" class="btn">
+                    <i class="fas fa-microphone"></i> Start Speaking
+                </button>
+                <div class="wave-loader" id="voiceLoader">
+                <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="loader wave-loader" id="voiceLoader"></div>
+                <div id="voiceResult" class="result-box"></div>
+                <div id="voiceError" class="error-message"></div>
+            </section>
+
+            <section class="hashtags-section">
+                <h2>Trending Hashtags</h2>
+                <div class="loader spinner-loader" id="hashtagLoader"></div>
+                <div id="hashtagsContainer" class="hashtags-container"></div>
+                <div id="hashtagError" class="error-message"></div>
+            </section>
+
+            <section class="share-section">
+                <h2>Share Caption</h2>
+                <div class="social-buttons">
+                    <button class="btn social-btn" data-platform="instagram">
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                    <button class="btn social-btn" data-platform="twitter">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button class="btn social-btn" data-platform="facebook">
+                        <i class="fab fa-facebook"></i>
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
